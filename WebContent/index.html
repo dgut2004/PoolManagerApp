@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" 	src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+<script type="text/javascript" src="script/numberPool.js"></script>
+<link rel="stylesheet" type="text/css" href="css/numberPool.css">
+
+
+
+<title>Number Pool Application</title> 
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="headercenter">Pool Manager Application</h1>
+			<p>Manages a number pool that allows only sequential number
+				retrieval but random number return insertion.</p>
+			<form>
+				<div class="well">
+
+					<div class="form-group">
+						<input class="btn btn-md btn-primary" type="button"
+							onclick="initNumberPool()" value="Initialize" /> the pool size
+						to <input class="input-lg" type=text id="numberPoolSize" />
+					</div>
+					<div class="form-group">
+						<input id="removeBtn" class="btn btn-md btn-primary" type="button"
+							disabled="true" onclick="removeLowest()" value="Remove">
+						the lowest number from the pool.
+					</div>
+					<div class="form-group">
+						<input id="returnBtn" class="btn btn-md btn-primary" type="button"
+							disabled="true" onclick="returnNumber()" value="Return" />
+						number <input id="returnValue" class="input-lg" type=text
+							disabled="true" /> to the pool.
+					</div>
+				</div>
+				<div class="well">
+					<div class="form-group">
+						<label for="poolDisplay">Pool:</label>
+						<textarea disabled class="form-control" rows="5" id="poolDisplay"></textarea>
+					</div>
+
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
